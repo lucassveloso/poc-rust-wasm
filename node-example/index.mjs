@@ -12,14 +12,8 @@ function timer (name) {
 }
 
 function fibonacciJS(n) {
-  switch(n) {
-    case 0:
-      return 1;
-    case 1:
-      return 1;
-    default:
-      return fibonacciJS(n - 1) + fibonacciJS(n - 2)
-  }
+  if (n <= 1) { return 1; }
+  return fibonacciJS(n - 1) + fibonacciJS(n - 2);
 }
 
 const wasm = timer('Fibonacci WASM');
